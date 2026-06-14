@@ -1,0 +1,49 @@
+$git init
+
+Initializes a new Git repository in the current directory.
+After git init, The hidden .git directory stores:
+	Commit history
+	Branches
+	Configuration
+	Staging information
+
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 ../
+-rw-r--r-- 1 pirja 197609  73 Jun 14 14:17 description
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 hooks/
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 info/
+-rw-r--r-- 1 pirja 197609 130 Jun 14 14:17 config
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 refs/
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 objects/
+-rw-r--r-- 1 pirja 197609  21 Jun 14 14:17 HEAD
+drwxr-xr-x 1 pirja 197609   0 Jun 14 14:17 ./
+
+
+$git config --global user.name "Shahistha Pirjade"
+Sets the username Git uses when creating commits.
+
+$git config --global user.email "pirjade-email@gmail.com"
+eg o/p 
+user.name=Shahistha Pirjade
+user.email=shahistha@gmail.com
+core.editor=vim
+init.defaultbranch=main
+
+$git config --list
+Displays all Git configuration settings.
+
+$git status
+It shows the current state of the working directory and staging area, including untracked, modified, and staged files.
+Shows:
+Current branch
+Modified files
+Staged files
+Untracked files
+
+$git add file1.txt
+File is in the staging area.
+
+$git commit -m "Added file1"
+
+$git commit -am "Updated application code"
+-a = Automatically stage all tracked files that have been modified or deleted. //i.e cannot use for initial file which is untracked. 
+-m = Commit message
