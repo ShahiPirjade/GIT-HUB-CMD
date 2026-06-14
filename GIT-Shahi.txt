@@ -47,3 +47,50 @@ $git commit -m "Added file1"
 $git commit -am "Updated application code"
 -a = Automatically stage all tracked files that have been modified or deleted. //i.e cannot use for initial file which is untracked. 
 -m = Commit message
+
+
+$ git branch // list branches 
+-a // list local and remote branches
+
+$git branch -m "NEW_BRANCH_NAME" // -m Rename a Branch
+
+$git checkout -b NEW_BRANCH
+Create and Switch to a new branch
+
+$git branch -d BRANCH 
+-d Delete merged branch
+-D Force deletes 
+
+###### To Configure Git Remote Repo #######
+$ mkdir myproject
+$ cd myproject
+$ git init
+
+Step 1: Create Repository on GitHub
+GitHub → New Repository [https://github.com/ShahiPirjade/GIT-HUB-CMD.git]
+
+Step 2: Check Current Remote
+git remote -v
+
+Step 3: Add Remote Repository
+git remote add <name> <repo-url>
+$ git remote add origin https://github.com/ShahiPirjade/GIT-HUB-CMD.git
+origin = alias name
+origin is the default alias name given to a remote repository.
+
+Change Existing Remote URL
+$ git remote set-url origin https://github.com/user/newrepo.git
+
+Remove Remote
+$ git remote remove origin
+
+Step 4: Verify Remote
+git remote -v
+
+Step 5: Push Code
+$git push -u origin main
+-u = upstream tracking
+origin = remote name
+main = branch name
+
+eg git push -u origin 
