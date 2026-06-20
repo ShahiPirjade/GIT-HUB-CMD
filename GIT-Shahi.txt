@@ -1,3 +1,9 @@
+always work on /opt - optional directory or /home 
+for redhat we have dnf[new] and yum[old] command
+check /etc/os-release
+[redhat linux] rpm [redhat package manager] - $rpm -qa | grep git [q query , a all]
+[debian linux] $ dpkg -l | grep git 
+
 $git init
 
 Initializes a new Git repository in the current directory.
@@ -52,7 +58,7 @@ $git commit -am "Updated application code"
 $ git branch // list branches 
 -a // list local and remote branches
 
-$git branch -m "NEW_BRANCH_NAME" // -m Rename a Branch
+$git branch -m "NEW_BRANCH_NAME" // -m Rename a Branch  -M forcefully rename [branches not merged]
 
 $git checkout -b NEW_BRANCH
 Create and Switch to a new branch
@@ -61,7 +67,9 @@ $git branch -d BRANCH
 -d Delete merged branch
 -D Force deletes 
 
-###### To Configure Git Remote Repo #######
+$ git switch dev
+$ git checkout dev 
+###### To Configure Git Remote Repo and push it #######
 $ mkdir myproject
 $ cd myproject
 $ git init
@@ -92,5 +100,14 @@ $git push -u origin main
 -u = upstream tracking
 origin = remote name
 main = branch name
-
+# Do not work on master/ main branch 
 eg git push -u origin 
+Difference Between Merge and Rebase?
+
+Most enterprises use:
+
+Pull Requests + Merge
+Pull Requests + Squash Merge
+
+Question 
+OpenShift Container Platform - if we are using then do we need to use podman?
